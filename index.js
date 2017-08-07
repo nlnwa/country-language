@@ -28,7 +28,7 @@ exports.getLanguageCodes = function (codeType, cb) {
     , cTypeNames = [ 'iso639_1', 'iso639_2en', 'iso639_3']
     , codes = [];
 
-  cb = cb || utils.isFunction(codeType) ? codeType : noop;
+  cb = cb || (utils.isFunction(codeType) ? codeType : noop);
 
   codeType = (codeType && !utils.isFunction(codeType)) ? codeType : 1;
   codeType = Math.floor(Number(codeType));
